@@ -53,12 +53,3 @@ class Processo:
     def run(self) -> None:
         """Runs the process"""
         self.__client()
-
-
-def run_processes():
-    """Runs a number of processes simultaneously"""
-    processes = [Processo(), Processo(), Processo()]
-    for process in processes:
-        Thread(target=process.run, args=[]).start()
-
-run_processes()
